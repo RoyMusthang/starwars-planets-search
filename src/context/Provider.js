@@ -23,13 +23,13 @@ function Provider({ children }) {
   });
 
   useEffect(() => {
-    API()
-      .then((dados) => {
-        dados
-          .forEach((dado) => delete dado.residents);
-        setData(dados);
-        setLoadind(false);
-      });
+    const api = API();
+    api.then((dados) => {
+      dados
+        .forEach((dado) => delete dado.residents);
+      setData(dados);
+      setLoadind(false);
+    });
   }, []);
 
   const context = { data, loading, ...name, setName };
