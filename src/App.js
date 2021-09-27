@@ -1,14 +1,12 @@
 import React from 'react';
-import Filter from './components/Filter';
-import Table from './components/Table';
-import Provider from './context/Provider';
+import AppProvider from './context/AppProvider';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
-    <Provider>
-      <Filter />
-      <Table />
-    </Provider>
+    <AppProvider>
+      <MainPage />
+    </AppProvider>
   );
 }
 
